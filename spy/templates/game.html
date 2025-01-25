@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spy Word Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        .player-info {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+        .word {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        button {
+            font-size: 1.2rem;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Spy Word Game</h1>
+    <h2>Current Round</h2>
+
+    <div class="player-info">
+        <p><strong>Current Player:</strong> {{ current_player }}</p>
+        <p><strong>Your Word:</strong> <span class="word">{{ word }}</span></p>
+    </div>
+
+    <h3>Game Rules</h3>
+    <p>Try to guess who the spy is by talking about your word without revealing it.</p>
+    
+    <!-- Voting or other actions can go here -->
+    <button onclick="location.href='{{ url_for('vote', game_id=game_id) }}'">Vote for Spy</button>
+</body>
+</html>

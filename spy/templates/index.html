@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spy Game</title>
+    <style>
+        /* General reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Container for the entire game */
+        .container {
+            background-color: #ffffff;
+            width: 90%;
+            max-width: 800px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        /* Header */
+        h1 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Game description */
+        p {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* Buttons */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 1.2em;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Lobby and game buttons */
+        button.lobby-btn, button.game-btn {
+            background-color: #008CBA;
+        }
+
+        button.lobby-btn:hover, button.game-btn:hover {
+            background-color: #007B9E;
+        }
+
+        /* Input field */
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            font-size: 1em;
+            border-radius: 8px;
+            border: 2px solid #ccc;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Card for individual player */
+        .card {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h2 {
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .card p {
+            color: #555;
+        }
+
+        /* Game area */
+        .game-area {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+
+        .game-area div {
+            background-color: #4CAF50;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 8px;
+            color: white;
+            font-size: 1.5em;
+            width: 100%;
+            max-width: 150px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .game-area div:hover {
+            background-color: #45a049;
+        }
+
+        /* Voting buttons */
+        .vote-btns {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .vote-btns button {
+            background-color: #f44336;
+            margin: 0 10px;
+        }
+
+        .vote-btns button:hover {
+            background-color: #e53935;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Spy Game</h1>
+        <p>Can you find the spy?</p>
+        <button class="lobby-btn">Join Lobby</button>
+    </div>
+</body>
+</html>
